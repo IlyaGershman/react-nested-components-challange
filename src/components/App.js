@@ -6,10 +6,6 @@ const App = () => {
 };
 
 class ComponentsGenerator extends React.Component {
-	constructor(props) {
-		super(props);
-	}
-
 	state = {
 		numChildren: 0
 	};
@@ -28,15 +24,16 @@ class ComponentsGenerator extends React.Component {
 		}
 
 		return (
-			<div
-				className="card"
-				onClick={(e) => {
-					e.stopPropagation();
-					this.onAddChild(e);
-				}}
-			>
-				{children}
-			</div>
+			<React.Fragment>
+				<div
+					className="card"
+					onClick={(e) => {
+						e.stopPropagation();
+						this.onAddChild(e);
+					}}
+				/>
+				<div className="children">{children}</div>
+			</React.Fragment>
 		);
 	}
 }

@@ -3,6 +3,9 @@
     min-height: 40px;
     border: 1px solid #aaa;
     display: block;
-    position: relative;
+    margin-left: 40px;
+}
+
+.children {
     margin-left: 40px;
 }
