@@ -10,7 +10,7 @@ class ComponentsGenerator extends React.PureComponent {
 		numChildren: 0
 	};
 
-    onAddChild = () => {
+	onAddChild = () => {
 		this.setState({
 			numChildren: this.state.numChildren + 1
 		});
@@ -19,7 +19,7 @@ class ComponentsGenerator extends React.PureComponent {
 	render() {
 		const children = [];
 
-		for (let i = 0; i < this.state.numChildren; i ++) {
+		for (let i = 0; i < this.state.numChildren; i++) {
 			children.push(<ComponentsGenerator key={i} number={i} />);
 		}
 
