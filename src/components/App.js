@@ -5,7 +5,7 @@ const App = () => {
 	return <ComponentsGenerator />;
 };
 
-class ComponentsGenerator extends React.Component {
+class ComponentsGenerator extends React.PureComponent {
 	state = {
 		numChildren: 0
 	};
