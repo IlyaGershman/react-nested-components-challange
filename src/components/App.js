@@ -10,7 +10,7 @@ class ComponentsGenerator extends React.Component {
 		numChildren: 0
 	};
 
-	onAddChild = (e) => {
+    onAddChild = () => {
 		this.setState({
 			numChildren: this.state.numChildren + 1
 		});
@@ -19,7 +19,7 @@ class ComponentsGenerator extends React.Component {
 	render() {
 		const children = [];
 
-		for (var i = 0; i < this.state.numChildren; i += 1) {
+		for (let i = 0; i < this.state.numChildren; i ++) {
 			children.push(<ComponentsGenerator key={i} number={i} />);
 		}
 
